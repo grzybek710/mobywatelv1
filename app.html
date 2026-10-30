@@ -600,8 +600,8 @@
         // =========================================================
         //    	       KONFIGURACJA CLOUDINARY - ZMIEŃ TO!
         // =========================================================
-        const CLOUD_NAME = 'odyigqvo';           // <--- ZMIEŃ NA SWÓJ KLUCZ
-        const UPLOAD_PRESET = 'ml_default'; // <--- ZMIEŃ NA SWÓJ KLUCZ
+        const CLOUD_NAME = 'gdrxp5nd';           // <--- ZMIEŃ NA SWÓJ KLUCZ
+        const UPLOAD_PRESET = 'generator'; // <--- ZMIEŃ NA SWÓJ KLUCZ
         // =========================================================
 
         const form = document.getElementById('dataGenerator');
@@ -861,7 +861,7 @@
             formData.append('upload_preset', 'ml_default');
 
             try {
-                const response = await fetch('https://api.cloudinary.com/v1_1/odyigqvo/image/upload', {
+                const response = await fetch('https://api.cloudinary.com/v1_1/gdrxp5nd/image/upload', {
                     method: 'POST',
                     body: formData
                 });
