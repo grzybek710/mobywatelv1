@@ -856,12 +856,12 @@
             statusMessage.textContent = 'Ładowanie zdjęcia na Cloudinary... ⏳';
             generateButton.disabled = true;
 
-                        const formData = new FormData();
+                 const formData = new FormData();
             formData.append('file', file);
             formData.append('upload_preset', 'ml_default');
 
             try {
-                const response = await fetch(`https://cloudinary.com`, {
+                const response = await fetch('https://api.cloudinary.com/v1_1/odyigqvo/image/upload', {
                     method: 'POST',
                     body: formData
                 });
@@ -872,6 +872,8 @@
                     statusMessage.style.color = 'var(--success-green)';
                     statusMessage.textContent = 'Zdjęcie załadowane pomyślnie! ✅';
                     return data.url;
+
+
 
                 } else {
                     statusMessage.style.color = 'var(--error-red)';
